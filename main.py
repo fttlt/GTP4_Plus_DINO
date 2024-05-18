@@ -168,7 +168,7 @@ input_data1={
     "text_threshold": 0.25,
     "show_visualisation": True,   
 }
-#20,37,
+
 
 # start_dino = time.time()
 output = replicate.run(
@@ -183,9 +183,8 @@ print("\n",output)
 
 
 
-###=========== EXTRACTING THE PREDICTED BBOXES OF DINO TO CALCULATE THE IOU ============#
+###=========== EXTRACTING AND DRAWING THE PREDICTED BBOXES OF DINO TO CALCULATE THE IOU ============#
 predicted_bboxes = []
-# List to hold detailed info including bounding boxes, confidence, and class for 'dog' or 'cat' detections
 bounding_boxes = []
 confid = []
 labels =[]
@@ -239,7 +238,7 @@ cv2.imwrite('DINO_ordning3_37_3.jpg',temp)
 
 cv2.waitKey(0)
 cv2.destroyAllWindows()
-###=========== END OF EXTRACTING PREDICTED BBOXES OF DINO TO CALCULATE THE IOU ============#
+###=========== END OF DRAWING AND EXTRACTING PREDICTED BBOXES OF DINO TO CALCULATE THE IOU ============#
 
 
 ###============= CALCULATING THE PRECISION, RECALL, TP, FP, FN =====####
